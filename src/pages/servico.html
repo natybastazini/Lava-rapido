@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Michroma&display=swap" rel="stylesheet">
+    <script type="module" src="../js/servico.js" defer></script>
+    <title>Fast Car</title>
 </head>
 <body class="flex flex-col h-screen bg-[url('../../img/fundo.svg')]">
     <header class="flex h-[20%] items-center justify-center">
@@ -20,17 +22,17 @@
     <main class="grow">
         <div class="h-full flex flex-row items-center justify-center gap-60">
             <!-- imagem -->
-            <div class="w-96 h-[560px] rounded-md bg-white border-4 border-principal">
-                  
-            </div>
+            <!-- <div class="w-96 h-[560px] rounded-md bg-white border-4 border-principal"> -->
+                <img class="w-96 h-[560px] rounded-md bg-white border-4 border-principal" src="../../img/carrolavando.svg" alt="carrolavando" id="servico-img">
+            <!-- </div> -->
             <!-- info -->
             <div class="flex flex-col justify-between gap-24">
                 <!-- título do serviço -->
-                <h1 class="font-fontDestaque text-2xl text-principal">
+                <h1 class="font-fontDestaque text-2xl text-principal" id="servico-nome">
                     Lavagem simples
                 </h1>
                 <!-- descricao -->
-                <p class="font-font text-[16px] text-input font-light w-96">
+                <p class="font-font text-[16px] text-input font-light w-96" id="servico-descricao">
                     A lavagem simples inclui lavagem externa com sabão neutro (shampoo exclusivo para lavagem automotiva), lavagem das caixas de roda e pneus, aspiração interna e limpeza do painel. O procedimento é simples e leva cerca de 45 a 60 minutos com agendamento prévio.
                 </p>
                 <!-- botão -->
