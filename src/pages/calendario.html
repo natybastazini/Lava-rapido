@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/calendario.js" defer></script>
+    <link rel="stylesheet" href="../input.css">
+    <link rel="stylesheet" href="../output.css">
+    <title>Agendamento</title>
+</head>
+<body class="flex flex-col items-center justify-center bg-[url('/img/bg.png')] h-screen">
+    <header class="text-aqua-dark text-3xl font-bold mb-4 px-28 scroll-py-32  border-aqua-dark rounded-full">Agendamento</header>
+    <div class="bg-white rounded-lg shadow p-6 text-center">
+        <div class="calender">
+            <div class="conteudo">
+                <div class="container-data flex items-center justify-between mb-4">
+                    <button class="btn-ant text-aqua-dark text-2xl" id="btn_prev">&lt;</button>
+                    <h2 class="text-aqua-dark text-2xl font-bold" id="mes"></h2>
+                    <button class="btn-pro text-aqua-dark text-2xl" id="btn_next">&gt;</button>
+                </div>
+                <table class="text-center w-full">
+                    <thead>
+                        <tr>
+                            <th class="p-2 text-aqua-dark">Dom</th>
+                            <th class="p-2 text-aqua-dark">Seg</th>
+                            <th class="p-2 text-aqua-dark">Ter</th>
+                            <th class="p-2 text-aqua-dark">Qua</th>
+                            <th class="p-2 text-aqua-dark">Qui</th>
+                            <th class="p-2 text-aqua-dark">Sex</th>
+                            <th class="p-2 text-aqua-dark">Sáb</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dias" class="dias">
+                        <!-- Dias do mês serão adicionados aqui dinamicamente -->
+                    </tbody>
+                </table>
+                <footer class="mt-4">
+                    <h2 class="ano text-aqua-dark" id="ano"></h2>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
