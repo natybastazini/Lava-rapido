@@ -1,6 +1,5 @@
-'use strict'
 
-import { getServico } from "./funcoes"
+import { getServico } from "./funcoes.js"
 
 const servicoId = localStorage.getItem('servico-id')
 
@@ -15,7 +14,8 @@ const montarCard = (servico) => {
 }
 
 window.addEventListener('load', async() => {
-    const servico = await getFilme(servicoId)
+    const servico = await getServico(servicoId)
     montarCard(servico)
 })
+
 

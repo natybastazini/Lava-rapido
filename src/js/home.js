@@ -1,6 +1,4 @@
-'use strict'
-
-import { getServicos } from "./funcoes"
+import {getServicos} from "./funcoes.js"
 
 const criarContainer = (servico) => {
     const container = document.createElement('div')
@@ -26,14 +24,19 @@ const criarContainer = (servico) => {
     })
     return container
 
+
 }
+
 
 async function mostrarContainer () {
     const containerCards = document.getElementById('container-cards')
     const servico = await getServicos()
 
-    servico.forEach( servico => {
-        const card = criarCard(servico)
+    
+    console.log(servico);
+
+    servico.forEach( servicos => {
+        const card = criarContainer(servicos)
         containerCards.appendChild(card)
     })
 }

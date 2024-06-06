@@ -12,5 +12,5 @@ export async function getServico(id) {
     const url = `http://localhost:8080/v1/lavarapido/servico/${id}`
     const response = await fetch(url)
     const data = await response.json()
-    return data.servico[0]
+    return data.servicos[0]
 }
