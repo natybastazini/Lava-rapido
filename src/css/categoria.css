@@ -3,7 +3,7 @@
     line-height: 1.6;
     color: white;
     background: #0B8185;
-    width: fit-content;
+    width: fit-content ;
     display: flex;
     list-style: none;
     border-radius: 10px;
@@ -43,7 +43,7 @@
     transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
   
-.menu .link svg {
+.menu .link img {
     width: 14px;
     height: 14px;
     fill: white;
@@ -93,7 +93,7 @@
     transform-origin: right;
 }
   
-.menu .item:hover .link svg {
+.menu .item:hover .link img {
     fill: #ffffff;
     transform: rotate(-180deg);
 }
