@@ -9,36 +9,43 @@
     <title>Fast Car</title>
 </head>
 <body class="flex flex-col items-center justify-center bg-[url('../../img/fundo.svg')] h-screen bg-cover">
-    <header class="text-principal text-3xl font-bold mb-4 px-28 scroll-py-32  border-prtext-principal rounded-full">Agendamento</header>
-    <div class="bg-white rounded-lg shadow p-6 text-center">
-        <div class="calender">
-            <div class="conteudo">
-                <div class="container-data flex items-center justify-between mb-4">
-                    <button class="btn-ant text-principal text-2xl" id="btn_prev">&lt;</button>
-                    <h2 class="text-principal text-2xl font-bold" id="mes"></h2>
-                    <button class="btn-pro text-principal text-2xl" id="btn_next">&gt;</button>
+    <header class="h-[20%] flex items-center justify-center">
+        <h1 class="text-principal font-fontDestaque text-4xl font-bold">
+            Agendamento
+        </h1>
+    </header>
+    <main class="grow">
+        <div class="bg-white rounded-lg shadow p-6 text-center">
+            <div class="calender">
+                <div class="conteudo">
+                    <div class="container-data flex items-center justify-between mb-4">
+                        <button class="btn-ant text-principal text-2xl" id="btn_prev">&lt;</button>
+                        <h2 class="text-principal text-2xl font-bold" id="mes"></h2>
+                        <button class="btn-pro text-principal text-2xl" id="btn_next">&gt;</button>
+                    </div>
+                    <table class="text-center w-full">
+                        <thead>
+                            <tr>
+                                <th class="p-2 text-principal">Dom</th>
+                                <th class="p-2 text-principal">Seg</th>
+                                <th class="p-2 text-principal">Ter</th>
+                                <th class="p-2 text-principal">Qua</th>
+                                <th class="p-2 text-principal">Qui</th>
+                                <th class="p-2 text-principal">Sex</th>
+                                <th class="p-2 text-principal">Sáb</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dias" class="dias">
+                            <!-- Dias do mês serão adicionados aqui dinamicamente -->
+                        </tbody>
+                    </table>
+                    <footer class="mt-4">
+                        <h2 class="ano text-principal" id="ano"></h2>
+                    </footer>
                 </div>
-                <table class="text-center w-full">
-                    <thead>
-                        <tr>
-                            <th class="p-2 text-principal">Dom</th>
-                            <th class="p-2 text-principal">Seg</th>
-                            <th class="p-2 text-principal">Ter</th>
-                            <th class="p-2 text-principal">Qua</th>
-                            <th class="p-2 text-principal">Qui</th>
-                            <th class="p-2 text-principal">Sex</th>
-                            <th class="p-2 text-principal">Sáb</th>
-                        </tr>
-                    </thead>
-                    <tbody id="dias" class="dias">
-                        <!-- Dias do mês serão adicionados aqui dinamicamente -->
-                    </tbody>
-                </table>
-                <footer class="mt-4">
-                    <h2 class="ano text-principal" id="ano"></h2>
-                </footer>
             </div>
         </div>
-    </div>
+    </main>
+    
 </body>
 </html>

@@ -10,11 +10,14 @@ module.exports = {
         input: '#F0EDED',
         letra: '#403831',
         borda: '#1F5F61',
-        
+        transparencia: "#fff2"
       },
       fontFamily: {
         fontDestaque: ['Michroma', 'sans-serif'],
         font: ['Kanit', 'sans-serif']
+      },
+      backgroundImage: {
+        fundo: "url('../img/fundo.svg')"   
       }
     },
   },

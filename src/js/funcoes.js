@@ -10,7 +10,8 @@ export async function getServicos() {
 
 export async function getServico(id) {
     const url = `http://localhost:8080/v1/lavarapido/servico/${id}`
+    console.log(url);
     const response = await fetch(url)
     const data = await response.json()
-    return data.servicos[0]
+    return data.servico[0]
 }
