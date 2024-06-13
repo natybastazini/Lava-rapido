@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const dayLabel = document.createElement('div');
             dayLabel.textContent = day;
-            dayLabel.className = 'absolute top-2 left-2 text-xs text-aqua-dark';
+            dayLabel.className = 'absolute top-2 left-2 text-xs text-principal';
 
             const button = document.createElement('button');
             button.textContent = 'Selecionar Horário';
-            button.className = 'mt-4 bg-aqua-dark text-white p-1 rounded text-xs';
+            button.className = 'mt-4 bg-principal text-white p-1 rounded text-xs';
             button.addEventListener('click', () => {
                 openTimeSelector(day, currentMonth, currentYear);
             });
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
             row.appendChild(cell);
         }
 
-        // Fill remaining cells in the last row
         while (row.children.length < 7) {
             const cell = document.createElement('td');
             row.appendChild(cell);
@@ -69,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         timeSelector.innerHTML = `
             <div class="bg-white p-4 rounded-lg shadow-lg">
-                <h2 class="text-xl mb-4 text-aqua-dark">Selecione um horário para ${day}/${month + 1}/${year}</h2>
+                <h2 class="text-xl mb-4 text-principal">Selecione um horário para ${day}/${month + 1}/${year}</h2>
                 <div class="grid grid-cols-3 gap-2">
-                    ${timeSlots.map(slot => `<button class="bg-aqua-dark text-white p-2 rounded" onclick="selectTimeSlot(this)">${slot}</button>`).join('')}
+                    ${timeSlots.map(slot => `<button class="bg-principal text-white p-2 rounded" onclick="selectTimeSlot(this)">${slot}</button>`).join('')}
                 </div>
                 <button class="mt-4 bg-red-500 text-white p-2 rounded" onclick="document.getElementById('time-selector').remove()">Fechar</button>
             </div>
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.selectTimeSlot = (button) => {
-        button.classList.remove('bg-aqua-dark', 'text-white');
+        button.classList.remove('bg-principal', 'text-white');
         button.classList.add('bg-gray-400', 'text-black');
         button.disabled = true;
     };

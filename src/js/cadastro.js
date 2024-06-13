@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('cadastro');
 
     button.addEventListener('click', () => {
+        const nomeUsuario = document.getElementById('nome').value;
+        const dataNascimento = document.getElementById('datanascimento').value;
+        const telefone = document.getElementById('telefone').value;
         const email = document.getElementById('email').value;
-        const nomeUsuario = document.getElementById('nomeUsuario').value;
-        const senha = document.getElementById('senha').value;
 
         let mensagemErro = '';
 
@@ -17,17 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nomeUsuario === '') {
             mensagemErro += 'Nome de Usuário está vazio.\n';
         }
-        if (senha === '') {
-            mensagemErro += 'Senha está vazia.\n';
+        if (dataNascimento === '') {
+            mensagemErro += 'Data nascimento está vazia.\n';
         }
-
+        if (telefone === '') {
+            mensagemErro += 'telefone está vazia.\n';
+        }
         if (mensagemErro !== '') {
             alert(mensagemErro);
         } else {
             const user = {
                 email,
                 nomeUsuario,
-                senha
+                telefone,
+                dataNascimento
             };
 
             const url = 'http://localhost:8080/v1/lavarapido/insertcliente';
